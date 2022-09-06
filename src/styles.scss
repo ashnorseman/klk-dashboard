@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'ticking_timebomb_bbregular';
+  src: url('assets/tickingtimebombbb-webfont.woff2') format('woff2'),
+  url('assets/tickingtimebombbb-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+  margin: 0 auto;
+  height: 1080px;
+  width: 1920px;
+}
