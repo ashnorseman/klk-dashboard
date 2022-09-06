@@ -17,7 +17,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "baseHref": "/uidoc/klk/",
             "outputPath": "dist/klk",
             "index": "src/index.html",
             "main": "src/main.ts",

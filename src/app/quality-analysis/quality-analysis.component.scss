@@ -50,6 +50,8 @@
   --corner: #2e69ff;
   background: #030a3d;
   box-shadow: inset #012c77 0 0 0 1px, inset #01083d 0 0 4px 10px;
+  display: flex;
+  flex-direction: column;
   position: relative;
 
   &.check-background {
@@ -77,6 +79,15 @@
     top: 0;
     bottom: 0;
   }
+}
+
+.section-common-header {
+  background: url("./assets/quality-common-header.png") center no-repeat;
+  color: #00e4ff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 56px;
+  text-align: center;
 }
 
 .section-main {
@@ -107,4 +118,127 @@
   font-weight: 700;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.section-summary {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 35px;
+}
+
+.section-summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 20px;
+  flex: 1;
+  position: relative;
+
+  &:not(:last-child)::before {
+    background: linear-gradient(0, #060d35 0, #00509e 25%, #00509e 75%, #060d35 100%);
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+  }
+}
+
+.section-summary-value {
+  color: #00e4ff;
+  font-size: 42px;
+}
+
+.section-summary-label {
+  color: #8581a2;
+  font-size: 24px;
+}
+
+.section-bar-chart {
+  flex: 1;
+}
+
+.section-minor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-gap: 10px;
+  padding: 15px 20px;
+}
+
+.section-minor-label {
+  color: white;
+  font-size: 20px;
+}
+
+.section-minor-value {
+  color: #00e4ff;
+  font-size: 26px;
+}
+
+.section-quality {
+  display: flex;
+  grid-gap: 40px;
+  flex: 1;
+  padding: 0 120px 0 90px;
+}
+
+.section-quality-chart {
+  flex: 1;
+}
+
+.section-quality-legend {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 150px;
+}
+
+.section-quality-item {
+  border-bottom: 1px dashed white;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  height: 35px;
+  margin-top: 4px;
+
+  &.item-1 {
+    --sign-color: #1df9fc;
+  }
+
+  &.item-2 {
+    --sign-color: #1e67f2;
+  }
+
+  &.item-3 {
+    --sign-color: #6e69f9;
+  }
+
+  &.item-4 {
+    --sign-color: #1e67f2;
+  }
+
+  &.item-5 {
+    --sign-color: #1df9fc;
+  }
+
+  &::before {
+    border: 3px solid var(--sign-color);
+    border-radius: 50%;
+    content: "";
+    height: 12px;
+    margin-right: 4px;
+    width: 12px;
+  }
+}
+
+.section-quality-label {
+  color: white;
+}
+
+.section-quality-value {
+  color: var(--sign-color);
+  margin-left: auto;
 }

@@ -2,9 +2,31 @@
 
 <div class="container">
   <div class="section-group left">
-    <div class="section-common check-background"></div>
-    <div class="section-common check-background"></div>
-    <div class="section-common check-background"></div>
+    <div class="section-common check-background section-summary">
+      <div class="section-summary-item">
+        <div class="section-summary-value">80%</div>
+        <div class="section-summary-label">标题</div>
+      </div>
+
+      <div class="section-summary-item">
+        <div class="section-summary-value">20%</div>
+        <div class="section-summary-label">标题</div>
+      </div>
+    </div>
+
+    <div class="section-common check-background">
+      <div class="section-common-header">综合合格率趋势</div>
+
+      <div #comprehensiveChart
+           class="section-bar-chart"></div>
+    </div>
+
+    <div class="section-common check-background">
+      <div class="section-common-header">一次合格率趋势</div>
+
+      <div #onceChart
+           class="section-bar-chart"></div>
+    </div>
   </div>
 
   <div class="section-group center">
@@ -16,15 +38,72 @@
       </div>
     </div>
 
-    <div class="section-common"></div>
-    <div class="section-common"></div>
-    <div class="section-common"></div>
-    <div class="section-common"></div>
+    <div class="section-common section-minor">
+      <div class="section-minor-label">良品数</div>
+      <div class="section-minor-value">636</div>
+    </div>
+
+    <div class="section-common section-minor">
+      <div class="section-minor-label">综合合格率</div>
+      <div class="section-minor-value">97.5%</div>
+    </div>
+
+    <div class="section-common section-minor">
+      <div class="section-minor-label">一次合格率</div>
+      <div class="section-minor-value">96.8%</div>
+    </div>
+
+    <div class="section-common section-minor">
+      <div class="section-minor-label">问题关闭率</div>
+      <div class="section-minor-value">95.2%</div>
+    </div>
   </div>
 
   <div class="section-group right">
-    <div class="section-common check-background"></div>
-    <div class="section-common check-background"></div>
-    <div class="section-common check-background"></div>
+    <div class="section-common check-background">
+      <div class="section-common-header">问题关闭率分析</div>
+
+      <div #closeRateChart
+           class="section-bar-chart"></div>
+    </div>
+
+    <div class="section-common check-background">
+      <div class="section-common-header">标题标题</div>
+
+      <div #rightChart
+           class="section-bar-chart"></div>
+    </div>
+
+    <div class="section-common check-background">
+      <div class="section-common-header">质量问题分类</div>
+
+      <div class="section-quality">
+        <div #qualityChart
+             class="section-bar-chart section-quality-chart"></div>
+
+        <div class="section-quality-legend">
+          <div class="section-quality-item item-1">
+            <div class="section-quality-label">外观</div>
+            <div class="section-quality-value">56.8%</div>
+          </div>
+          <div class="section-quality-item item-2">
+            <div class="section-quality-label">尺寸</div>
+            <div class="section-quality-value">25.8%</div>
+          </div>
+          <div class="section-quality-item item-3">
+            <div class="section-quality-label">其他</div>
+            <div class="section-quality-value">16.8%</div>
+          </div>
+          <div class="section-quality-item item-4">
+            <div class="section-quality-label">零件</div>
+            <div class="section-quality-value">13.8%</div>
+          </div>
+          <div class="section-quality-item item-5">
+            <div class="section-quality-label">功能</div>
+            <div class="section-quality-value">5.8%</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
