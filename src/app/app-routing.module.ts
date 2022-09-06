@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 
 import { MenuComponent } from "./menu/menu.component";
 import { OrderAnalysisComponent } from "./order-analysis/order-analysis.component";
+import { QualityAnalysisComponent } from "./quality-analysis/quality-analysis.component";
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: "order-analysis",
     component: OrderAnalysisComponent,
+  },
+  {
+    path: "quality-analysis",
+    component: QualityAnalysisComponent,
   },
 ];
 
