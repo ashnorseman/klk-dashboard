@@ -11,7 +11,7 @@
   background: url("./assets/quality-header.png") center bottom no-repeat;
   color: #5feafd;
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 700;
   height: 108px;
   padding-top: 24px;
   text-align: center;
@@ -149,6 +149,7 @@
 .section-summary-value {
   color: #00e4ff;
   font-size: 42px;
+  font-weight: 700;
 }
 
 .section-summary-label {
@@ -217,11 +218,11 @@
   }
 
   &.item-4 {
-    --sign-color: #1e67f2;
+    --sign-color: #00b7ee;
   }
 
   &.item-5 {
-    --sign-color: #1df9fc;
+    --sign-color: #cac9c9;
   }
 
   &::before {

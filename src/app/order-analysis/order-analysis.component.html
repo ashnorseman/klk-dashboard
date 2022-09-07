@@ -112,30 +112,13 @@
     </div>
 
     <div class="section-bar-columns">
-      <div class="section-bar-column-group">
-        <div class="section-bar-column-group-bar item-1" style="--height: 90%"></div>
-        <div class="section-bar-column-group-bar item-2" style="--height: 80%"></div>
-        <div class="section-bar-column-label">公共区域</div>
-      </div>
-      <div class="section-bar-column-group">
-        <div class="section-bar-column-group-bar item-1" style="--height: 70%"></div>
-        <div class="section-bar-column-group-bar item-2" style="--height: 60%"></div>
-        <div class="section-bar-column-label">后整理车间</div>
-      </div>
-      <div class="section-bar-column-group">
-        <div class="section-bar-column-group-bar item-1" style="--height: 50%"></div>
-        <div class="section-bar-column-group-bar item-2" style="--height: 40%"></div>
-        <div class="section-bar-column-label">涂料车间</div>
-      </div>
-      <div class="section-bar-column-group">
-        <div class="section-bar-column-group-bar item-1" style="--height: 30%"></div>
-        <div class="section-bar-column-group-bar item-2" style="--height: 20%"></div>
-        <div class="section-bar-column-label">浇筑车间</div>
-      </div>
-      <div class="section-bar-column-group">
-        <div class="section-bar-column-group-bar item-1" style="--height: 10%"></div>
-        <div class="section-bar-column-group-bar item-2" style="--height: 5%"></div>
-        <div class="section-bar-column-label">蜡膜车间</div>
+      <div *ngFor="let item of barLeftData[0]; let i = index"
+           class="section-bar-column-group">
+        <div class="section-bar-column-group-bar item-1"
+             [style]="{ 'height': item.percent + '%' }"></div>
+        <div class="section-bar-column-group-bar item-2"
+             [style]="{ 'height': barLeftData[1][i].percent + '%' }"></div>
+        <div class="section-bar-column-label">{{item.name}}</div>
       </div>
     </div>
   </div>
@@ -158,35 +141,13 @@
     </div>
 
     <div class="section-bar-columns">
-      <div class="section-bar-column">
-        <div class="section-bar-column-bar" style="--height: 90%">
-          <div class="section-bar-column-number">1892</div>
+      <div *ngFor="let item of barRightData"
+           class="section-bar-column">
+        <div class="section-bar-column-bar"
+             [style]="{ 'height': item.percent + '%' }">
+          <div class="section-bar-column-number">{{item.value}}</div>
         </div>
-        <div class="section-bar-column-label">车间1</div>
-      </div>
-      <div class="section-bar-column">
-        <div class="section-bar-column-bar" style="--height: 80%">
-          <div class="section-bar-column-number">1500</div>
-        </div>
-        <div class="section-bar-column-label">车间2</div>
-      </div>
-      <div class="section-bar-column">
-        <div class="section-bar-column-bar" style="--height: 60%">
-          <div class="section-bar-column-number">1200</div>
-        </div>
-        <div class="section-bar-column-label">车间3</div>
-      </div>
-      <div class="section-bar-column">
-        <div class="section-bar-column-bar" style="--height: 35%">
-          <div class="section-bar-column-number">1200</div>
-        </div>
-        <div class="section-bar-column-label">车间4</div>
-      </div>
-      <div class="section-bar-column">
-        <div class="section-bar-column-bar" style="--height: 30%">
-          <div class="section-bar-column-number">600</div>
-        </div>
-        <div class="section-bar-column-label">车间5</div>
+        <div class="section-bar-column-label">{{item.name}}</div>
       </div>
     </div>
   </div>
