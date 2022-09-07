@@ -239,70 +239,67 @@ export class QualityAnalysisComponent implements AfterViewInit {
         radius: [30, "100%"],
       },
       angleAxis: {
-        clockWise: false,
+        clockwise: false,
+        min: 0,
         max: 100,
         show: false,
-        startAngle: 90,
-        axisTick: {
-          show: false,
-        },
-        axisLine: {
-          show: false,
-        },
+
       },
       radiusAxis: {
         show: false,
         type: "category",
         data: ["功能", "零件", "其他", "尺寸", "外观"],
       },
-      series: {
-        type: "bar",
-        data: [
-          {
-            value: 5.8,
-            itemStyle: {
-              color: "#cac9c9",
+      series: [
+        {
+          type: "bar",
+          data: [
+            {
+              value: 5.8,
+              itemStyle: {
+                color: "#cac9c9",
+              },
             },
-          },
-          {
-            value: 13.8,
-            itemStyle: {
-              color: "#00b7ee",
+            {
+              value: 13.8,
+              itemStyle: {
+                color: "#00b7ee",
+              },
             },
-          },
-          {
-            value: 16.8,
-            itemStyle: {
-              color: "#6e69f9",
+            {
+              value: 16.8,
+              itemStyle: {
+                color: "#6e69f9",
+              },
             },
-          },
-          {
-            value: 25.8,
-            itemStyle: {
-              color: "#1e67f2",
+            {
+              value: 25.8,
+              itemStyle: {
+                color: "#1e67f2",
+              },
             },
-          },
-          {
-            value: 56.8,
-            itemStyle: {
-              color: "#1df9fc",
+            {
+              value: 56.8,
+              itemStyle: {
+                color: "#1df9fc",
+              },
             },
+          ],
+          coordinateSystem: "polar",
+          label: {
+            show: true,
+            rotate: 0,
+            position: "start",
+            offset: [16, 0],
+            align: "left",
+            formatter: "{c}%",
+            color: "white",
           },
-        ],
-        coordinateSystem: "polar",
-        label: {
-          show: true,
-          rotate: 0,
-          position: "start",
-          offset: [-10, 0],
-          align: "right",
-          formatter: "{c}%",
-          color: "white",
+          barWidth: 6,
+          showBackground: true,
+          backgroundColor: "#282b4e",
         },
-        barWidth: 6,
-        showBackground: true,
-        backgroundColor: "#282b4e",
-      },
+      ],
     });
   }
 }
