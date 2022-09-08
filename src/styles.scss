@@ -15,10 +15,15 @@
   padding: 0;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   line-height: 1;
   margin: 0 auto;
   height: 1080px;
+  transform-origin: top left;
   width: 1920px;
 }
 
