@@ -316,38 +316,12 @@ export class QualityAnalysisComponent implements AfterViewInit {
             },
             color: "white",
           },
-          data: [
-            {
-              value: 33,
-              itemStyle: {
-                color: "#060d35",
-              },
+          data: new Array(value.length).fill({
+            value: 33,
+            itemStyle: {
+              color: "#060d35",
             },
-            {
-              value: 33,
-              itemStyle: {
-                color: "#060d35",
-              },
-            },
-            {
-              value: 33,
-              itemStyle: {
-                color: "#060d35",
-              },
-            },
-            {
-              value: 33,
-              itemStyle: {
-                color: "#060d35",
-              },
-            },
-            {
-              value: 33,
-              itemStyle: {
-                color: "#060d35",
-              },
-            },
-          ],
+          }),
           coordinateSystem: "polar",
           barWidth: 8,
           barGap: "-110%",
