@@ -104,7 +104,9 @@ export class OrderAnalysisComponent implements AfterViewInit {
       },
     ],
   ];
-  public barLeftTarget = [[1800, 1400, 1000, 600, 200], [1600, 1200, 800, 400, 100]];
+  public barLeftTarget = [
+    [1800, 1400, 1000, 600, 200],
+    [1600, 1200, 800, 400, 100]];
 
   public ballCurve: {
     path: string;
@@ -131,7 +133,7 @@ export class OrderAnalysisComponent implements AfterViewInit {
           item.percent = item.value / 2000 * 100;
           shouldRun = true;
         }
-      })
+      });
     });
 
     if (shouldRun) {
@@ -163,7 +165,9 @@ export class OrderAnalysisComponent implements AfterViewInit {
     this.ballCurve = this.createCurvePath(this.ballCurvePercent);
 
     if (this.ballCurvePercent < this.ballCurveTarget) {
-      this.ballCurvePercent = Math.min(this.ballCurvePercent + this.ballCurveTarget / 100, this.ballCurveTarget);
+      this.ballCurvePercent = Math.min(
+        this.ballCurvePercent + this.ballCurveTarget / 100,
+        this.ballCurveTarget);
 
       window.requestAnimationFrame(() => {
         this.createCurve();
@@ -182,24 +186,31 @@ export class OrderAnalysisComponent implements AfterViewInit {
     const c = 175 / 2;
     const r = 175 / 2;
 
-    const f_matrix_times: ([[a, b], [c, d]]: [[number, number], [number, number]], [x, y]: [number, number]) => [number, number]
+    const f_matrix_times: (
+      [[a, b], [c, d]]: [[number, number], [number, number]],
+      [x, y]: [number, number]) => [number, number]
       = ([[a, b], [c, d]], [x, y]) => [a * x + b * y, c * x + d * y];
 
     const f_rotate_matrix: (x: number) => [[number, number], [number, number]]
       = x => [[cos(x), -sin(x)], [sin(x), cos(x)]];
 
-    const f_vec_add: ([a1, a2]: [number, number], [b1, b2]: [number, number]) => [number, number]
+    const f_vec_add: (
+      [a1, a2]: [number, number],
+      [b1, b2]: [number, number]) => [number, number]
       = ([a1, a2], [b1, b2]) => [a1 + b1, a2 + b2];
 
     const deg = percent * 2 * pi % (2 * pi);
     const rotMatrix = f_rotate_matrix(rotateRad);
-    const [sX, sY] = (f_vec_add(f_matrix_times(rotMatrix, [r * cos(-pi / 2), r * sin(-pi / 2)]), [c, c]));
-    const [eX, eY] = (f_vec_add(f_matrix_times(rotMatrix, [r * cos(-pi / 2 + deg), r * sin(-pi / 2 + deg)]), [c, c]));
+    const [sX, sY] = (f_vec_add(
+      f_matrix_times(rotMatrix, [r * cos(-pi / 2), r * sin(-pi / 2)]), [c, c]));
+    const [eX, eY] = (f_vec_add(f_matrix_times(rotMatrix,
+      [r * cos(-pi / 2 + deg), r * sin(-pi / 2 + deg)]), [c, c]));
     const fA = ((deg > pi) ? 1 : 0);
     const fS = ((deg > 0) ? 1 : 0);
 
     return {
-      path: "M " + sX + " " + sY + " A " + [c, c, rotateRad / (2 * pi) * 360, fA, fS, eX, eY].join(" "),
+      path: "M " + sX + " " + sY + " A " +
+        [c, c, rotateRad / (2 * pi) * 360, fA, fS, eX, eY].join(" "),
       endPoint: [eX, eY],
     };
   }
@@ -259,6 +270,57 @@ export class OrderAnalysisComponent implements AfterViewInit {
               name: "标题4",
               itemStyle: {
                 color: "#32ff40",
+              },
+            },
+          ],
+        },
+        {
+          type: "pie",
+          z: -1,
+          radius: ["43%", "85%"],
+          center: ["50%", "50%"],
+          roseType: "area",
+          labelLine: {
+            show: false,
+          },
+          label: {
+            show: false,
+            position: "center",
+          },
+          emphasis: {
+            label: {
+              show: true,
+              fontSize: 16,
+              color: "white",
+            },
+          },
+          data: [
+            {
+              value: 39,
+              name: "标题1",
+              itemStyle: {
+                color: "#c1930c",
+              },
+            },
+            {
+              value: 22,
+              name: "标题2",
+              itemStyle: {
+                color: "#01cbcb",
+              },
+            },
+            {
+              value: 16,
+              name: "标题3",
+              itemStyle: {
+                color: "#087cc0",
+              },
+            },
+            {
+              value: 13,
+              name: "标题4",
+              itemStyle: {
+                color: "#26bc30",
               },
             },
           ],

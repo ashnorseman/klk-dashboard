@@ -1,4 +1,7 @@
-<header class="page-header">订单生产分析</header>
+<header class="page-header">
+  订单生产分析
+  <span class="page-header-shadow">订单生产分析</span>
+</header>
 
 <div class="section-total">
   <header class="section-total-header">本季度总销量</header>
@@ -114,10 +117,10 @@
     <div class="section-bar-columns">
       <div *ngFor="let item of barLeftData[0]; let i = index"
            class="section-bar-column-group">
-        <div class="section-bar-column-group-bar item-1"
-             [style]="{ 'height': item.percent + '%' }"></div>
-        <div class="section-bar-column-group-bar item-2"
-             [style]="{ 'height': barLeftData[1][i].percent + '%' }"></div>
+        <div [style]="{ 'height': item.percent + '%' }"
+             class="section-bar-column-group-bar item-1"></div>
+        <div [style]="{ 'height': barLeftData[1][i].percent + '%' }"
+             class="section-bar-column-group-bar item-2"></div>
         <div class="section-bar-column-label">{{item.name}}</div>
       </div>
     </div>
@@ -143,8 +146,8 @@
     <div class="section-bar-columns">
       <div *ngFor="let item of barRightData"
            class="section-bar-column">
-        <div class="section-bar-column-bar"
-             [style]="{ 'height': item.percent + '%' }">
+        <div [style]="{ 'height': item.percent + '%' }"
+             class="section-bar-column-bar">
           <div class="section-bar-column-number">{{item.value}}</div>
         </div>
         <div class="section-bar-column-label">{{item.name}}</div>
@@ -165,7 +168,7 @@
 
       <svg class="section-ball-curve">
         <defs>
-          <linearGradient id="point" x1="50%" y1="0%" x2="50%" y2="100%">
+          <linearGradient id="point" x1="50%" x2="50%" y1="0%" y2="100%">
             <stop offset="0%" style="stop-color: #25e8ff;stop-opacity:1" />
             <stop offset="100%" style="stop-color: #001f3f;stop-opacity:1" />
           </linearGradient>
@@ -186,13 +189,14 @@
 
         <circle [attr.cx]="ballCurve.endPoint[0]"
                 [attr.cy]="ballCurve.endPoint[1]"
-                r="6"
-                fill="url(#point)" />
+                fill="url(#point)"
+                r="6" />
       </svg>
 
-      <div class="section-ball-number"
-           [style.left.px]="ballCurve.endPoint[0]"
-           [style.top.px]="ballCurve.endPoint[1]">{{ballCurvePercent * 100 | number: ".0-1"}}%</div>
+      <div [style.left.px]="ballCurve.endPoint[0]"
+           [style.top.px]="ballCurve.endPoint[1]"
+           class="section-ball-number">{{ballCurvePercent * 100 | number: ".0-1"}}%
+      </div>
     </div>
 
     <div class="section-ball-value item-1">1520架<br>正常起飞</div>
@@ -223,7 +227,8 @@
         <td>BorgWarner博格华纳</td>
         <td>
           <div class="progress"
-               style="--value: 71%">71%</div>
+               style="--value: 71%">71%
+          </div>
         </td>
         <td>270</td>
         <td>400</td>
@@ -234,7 +239,8 @@
         <td>Continental新大陆</td>
         <td>
           <div class="progress"
-               style="--value: 80.19%">80.19%</div>
+               style="--value: 80.19%">80.19%
+          </div>
         </td>
         <td>300</td>
         <td>690</td>
@@ -245,7 +251,8 @@
         <td>Garret盖瑞特</td>
         <td>
           <div class="progress"
-               style="--value: 62.87%">62.87%</div>
+               style="--value: 62.87%">62.87%
+          </div>
         </td>
         <td>379</td>
         <td>500</td>
@@ -256,7 +263,8 @@
         <td>IHI集团</td>
         <td>
           <div class="progress"
-               style="--value: 93.12%">93.12%</div>
+               style="--value: 93.12%">93.12%
+          </div>
         </td>
         <td>200</td>
         <td>340</td>
@@ -267,7 +275,8 @@
         <td>富奥石川岛</td>
         <td>
           <div class="progress"
-               style="--value: 95.34%">95.34%</div>
+               style="--value: 95.34%">95.34%
+          </div>
         </td>
         <td>1000</td>
         <td>1580</td>
@@ -302,7 +311,8 @@
         <td>BorgWarner博格华纳</td>
         <td>
           <div class="progress"
-               style="--value: 71%">71%</div>
+               style="--value: 71%">71%
+          </div>
         </td>
         <td>270</td>
         <td>400</td>
@@ -313,7 +323,8 @@
         <td>Continental新大陆</td>
         <td>
           <div class="progress"
-               style="--value: 80.19%">80.19%</div>
+               style="--value: 80.19%">80.19%
+          </div>
         </td>
         <td>300</td>
         <td>690</td>
@@ -324,7 +335,8 @@
         <td>Garret盖瑞特</td>
         <td>
           <div class="progress"
-               style="--value: 62.87%">62.87%</div>
+               style="--value: 62.87%">62.87%
+          </div>
         </td>
         <td>379</td>
         <td>500</td>
@@ -335,7 +347,8 @@
         <td>IHI集团</td>
         <td>
           <div class="progress"
-               style="--value: 93.12%">93.12%</div>
+               style="--value: 93.12%">93.12%
+          </div>
         </td>
         <td>200</td>
         <td>340</td>
@@ -346,7 +359,8 @@
         <td>富奥石川岛</td>
         <td>
           <div class="progress"
-               style="--value: 95.34%">95.34%</div>
+               style="--value: 95.34%">95.34%
+          </div>
         </td>
         <td>1000</td>
         <td>1580</td>

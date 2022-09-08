@@ -14,6 +14,7 @@
   font-weight: 700;
   height: 108px;
   padding-top: 24px;
+  position: relative;
   text-align: center;
 }
 
@@ -56,19 +57,17 @@
 
   &.check-background {
     background-color: #060d35;
-    background-image:
-      linear-gradient(transparent 19px, #061342 0, #061342 20px),
-      linear-gradient(90deg, transparent 19px, #061342 0, #061342 20px);
+    background-image: linear-gradient(transparent 19px, #061342 0, #061342 20px),
+    linear-gradient(90deg, transparent 19px, #061342 0, #061342 20px);
     background-size: 20px 20px;
   }
 
   &::before {
     content: "";
-    background-image:
-      linear-gradient(90deg, var(--corner) 2px, transparent 0, transparent calc(100% - 2px), var(--corner) 0),
-      linear-gradient(90deg, var(--corner) 2px, transparent 0, transparent calc(100% - 2px), var(--corner) 0),
-      linear-gradient(var(--corner) 2px, transparent 0, transparent calc(100% - 2px), var(--corner) 0),
-      linear-gradient(var(--corner) 2px, transparent 0, transparent calc(100% - 2px), var(--corner) 0);
+    background-image: linear-gradient(90deg, var(--corner) 2px, transparent 0, transparent calc(100% - 2px), var(--corner) 0),
+    linear-gradient(90deg, var(--corner) 2px, transparent 0, transparent calc(100% - 2px), var(--corner) 0),
+    linear-gradient(var(--corner) 2px, transparent 0, transparent calc(100% - 2px), var(--corner) 0),
+    linear-gradient(var(--corner) 2px, transparent 0, transparent calc(100% - 2px), var(--corner) 0);
     background-position: top, bottom, left, right;
     background-size: 100% 16px, 100% 16px, 16px 100%, 16px 100%;
     background-repeat: no-repeat;

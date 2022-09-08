@@ -21,3 +21,19 @@ body {
   height: 1080px;
   width: 1920px;
 }
+
+.page-header-shadow {
+  color: inherit;
+  filter: blur(10px);
+  font-size: inherit;
+  font-weight: inherit;
+  height: inherit;
+  line-height: inherit;
+  padding: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  text-align: inherit;
+}

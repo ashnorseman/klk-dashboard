@@ -191,8 +191,12 @@
 }
 
 @keyframes sway {
-  0% { transform: translateY(calc(var(--value-less) * 1px - 5%)); }
-  100% { transform: translateY(calc(var(--value-less) * 1px + 5%)); }
+  0% {
+    transform: translateY(calc(var(--value-less) * 1px - 5%));
+  }
+  100% {
+    transform: translateY(calc(var(--value-less) * 1px + 5%));
+  }
 }
 
 .section-order-task-number {
