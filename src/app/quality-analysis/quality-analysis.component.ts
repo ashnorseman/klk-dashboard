@@ -309,7 +309,7 @@ export class QualityAnalysisComponent implements AfterViewInit {
             show: true,
             rotate: 0,
             position: "insideTopLeft",
-            offset: [8, -8],
+            offset: [8, -7],
             align: "left",
             formatter: (p: any) => {
               return `${value[p.dataIndex]}%`;
