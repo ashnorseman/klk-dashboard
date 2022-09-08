@@ -228,6 +228,8 @@ export class QualityAnalysisComponent implements AfterViewInit {
 
     const chart = echarts.init(el);
 
+    const value = [5.8, 13.8, 16.8, 25.8, 56.8];
+
     chart.setOption({
       grid: {
         left: 0,
@@ -241,9 +243,9 @@ export class QualityAnalysisComponent implements AfterViewInit {
       angleAxis: {
         clockwise: false,
         min: 0,
-        max: 100,
+        max: 133,
         show: false,
-
+        startAngle: 0,
       },
       radiusAxis: {
         show: false,
@@ -253,33 +255,36 @@ export class QualityAnalysisComponent implements AfterViewInit {
       series: [
         {
           type: "bar",
+          emphasis: {
+            disabled: true
+          },
           data: [
             {
-              value: 5.8,
+              value: value[0] + 33,
               itemStyle: {
                 color: "#cac9c9",
               },
             },
             {
-              value: 13.8,
+              value: value[1] + 33,
               itemStyle: {
                 color: "#00b7ee",
               },
             },
             {
-              value: 16.8,
+              value: value[2] + 33,
               itemStyle: {
                 color: "#6e69f9",
               },
             },
             {
-              value: 25.8,
+              value: value[3] + 33,
               itemStyle: {
                 color: "#1e67f2",
               },
             },
             {
-              value: 56.8,
+              value: value[4] + 33,
               itemStyle: {
                 color: "#1df9fc",
               },
@@ -287,17 +292,65 @@ export class QualityAnalysisComponent implements AfterViewInit {
           ],
           coordinateSystem: "polar",
           label: {
-            show: true,
-            rotate: 0,
-            position: "start",
-            offset: [16, 0],
-            align: "left",
-            formatter: "{c}%",
-            color: "white",
+            show: false,
           },
           barWidth: 6,
           showBackground: true,
           backgroundColor: "#282b4e",
+        },
+        {
+          type: "bar",
+          zIndex: 2,
+          animation: false,
+          emphasis: {
+            disabled: true
+          },
+          label: {
+            show: true,
+            rotate: 0,
+            position: "insideTopLeft",
+            offset: [8, -8],
+            align: "left",
+            formatter: (p: any) => {
+              return `${value[p.dataIndex]}%`;
+            },
+            color: "white",
+          },
+          data: [
+            {
+              value: 33,
+              itemStyle: {
+                color: "#060d35",
+              },
+            },
+            {
+              value: 33,
+              itemStyle: {
+                color: "#060d35",
+              },
+            },
+            {
+              value: 33,
+              itemStyle: {
+                color: "#060d35",
+              },
+            },
+            {
+              value: 33,
+              itemStyle: {
+                color: "#060d35",
+              },
+            },
+            {
+              value: 33,
+              itemStyle: {
+                color: "#060d35",
+              },
+            },
+          ],
+          coordinateSystem: "polar",
+          barWidth: 8,
+          barGap: "-110%",
         },
       ],
     });
