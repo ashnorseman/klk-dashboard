@@ -3,6 +3,9 @@ import { RouterModule, Routes } from "@angular/router";
 
 import { MenuComponent } from "./menu/menu.component";
 import {
+  HuaXingProdLineComponent
+} from "./huaxing-prod-line/hua-xing-prod-line.component";
+import {
   OrderAnalysisComponent,
 } from "./order-analysis/order-analysis.component";
 import {
@@ -21,6 +24,10 @@ const routes: Routes = [
   {
     path: "quality-analysis",
     component: QualityAnalysisComponent,
+  },
+  {
+    path: "hua-xing-prod-line",
+    component: HuaXingProdLineComponent,
   },
 ];
 

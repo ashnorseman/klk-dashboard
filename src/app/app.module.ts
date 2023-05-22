@@ -12,6 +12,7 @@ import {
 import {
   QualityAnalysisComponent,
 } from "./quality-analysis/quality-analysis.component";
+import { HuaXingProdLineComponent } from './huaxing-prod-line/hua-xing-prod-line.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {
     OrderAnalysisComponent,
     MenuComponent,
     QualityAnalysisComponent,
+    HuaXingProdLineComponent,
   ],
   imports: [
     BrowserModule,
