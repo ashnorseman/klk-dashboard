@@ -13,6 +13,7 @@ import {
   QualityAnalysisComponent,
 } from "./quality-analysis/quality-analysis.component";
 import { HuaXingProdLineComponent } from './huaxing-prod-line/hua-xing-prod-line.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HuaXingProdLineComponent } from './huaxing-prod-line/hua-xing-prod-line
     MenuComponent,
     QualityAnalysisComponent,
     HuaXingProdLineComponent,
+    ChatComponent,
   ],
   imports: [
     BrowserModule,

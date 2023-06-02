@@ -1,0 +1,126 @@
+:host {
+  background: #080710;
+  display: flex;
+  grid-gap: 16px;
+  height: 100%;
+  padding: 16px;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  grid-gap: 16px;
+}
+
+.left-column {
+  flex: 1;
+}
+
+.right-column {
+  width: 30%;
+}
+
+.panel-top {
+  height: 30%;
+}
+
+// ----- Chat panel ----- //
+
+.panel {
+  background: #191834;
+  border-radius: 8px;
+}
+
+.panel-chat {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.chat-box {
+  flex: 1;
+  overflow: auto;
+}
+
+.chat-item {
+  display: flex;
+  grid-gap: 14px;
+  overflow: hidden;
+}
+
+.chat-avatar {
+  border-radius: 50%;
+  height: 42px;
+  width: 42px;
+}
+
+.chat-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+.chat-info {
+  color: rgba(255, 255, 255, .32);
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.chat-message {
+  background: rgba(255, 255, 255, .06);
+  border-radius: 0 18px 18px 18px;
+  color: #FFF;
+  padding: 12px 20px;
+  max-width: 80%;
+  width: max-content;
+}
+
+.chat-me {
+  text-align: right;
+
+  .chat-message {
+    background: #5F00F6;
+    border-radius: 18px 18px 0 18px;
+    float: right;
+  }
+}
+
+.chat-input {
+  display: flex;
+  grid-gap: 12px;
+
+  input {
+    flex: 1;
+  }
+}
+
+input,
+button {
+  border: 0;
+  border-radius: 6px;
+  font: inherit;
+  height: 46px;
+  outline: 0;
+}
+
+input {
+  background: rgba(255, 255, 255, .07);
+  color: #FFF;
+  padding: 0 14px;
+}
+
+button {
+  background: #5F00F6;
+  color: #FFF;
+  padding: 0 24px;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, .25);
+}
+
+// ----- Chat panel end ----- //

@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
+import { ChatComponent } from "./chat/chat.component";
 import { MenuComponent } from "./menu/menu.component";
 import {
   HuaXingProdLineComponent
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: "hua-xing-prod-line",
     component: HuaXingProdLineComponent,
+  },
+  {
+    path: "chat",
+    component: ChatComponent,
   },
 ];
 
