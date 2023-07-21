@@ -14,6 +14,7 @@ import {
 } from "./quality-analysis/quality-analysis.component";
 import { HuaXingProdLineComponent } from './huaxing-prod-line/hua-xing-prod-line.component';
 import { ChatComponent } from './chat/chat.component';
+import { ThemeSwitchingComponent } from './theme-switching/theme-switching.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ChatComponent } from './chat/chat.component';
     QualityAnalysisComponent,
     HuaXingProdLineComponent,
     ChatComponent,
+    ThemeSwitchingComponent,
   ],
   imports: [
     BrowserModule,

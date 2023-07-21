@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>三角形</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板-1" transform="translate(-1221.000000, -440.000000)" fill="#387DFF" fill-rule="nonzero">
+            <g id="Card-3" transform="translate(1005.000000, 317.000000)">
+                <g id="Ring-ratio" transform="translate(30.000000, 118.000000)">
+                    <g id="2" transform="translate(110.000000, 0.000000)">
+                        <path d="M79.090384,9.41483434 L76.5507118,5.78673117 C76.3923546,5.56050652 76.447372,5.24874129 76.6735966,5.09038404 C76.7576384,5.0315548 76.8577417,5 76.9603278,5 L82.0396722,5 C82.3158146,5 82.5396722,5.22385763 82.5396722,5.5 C82.5396722,5.60258605 82.5081174,5.7026894 82.4492882,5.78673117 L79.909616,9.41483434 C79.7512587,9.64105899 79.4394935,9.69607638 79.2132688,9.53771913 C79.1654482,9.50424467 79.1238585,9.462655 79.090384,9.41483434 Z" id="三角形" transform="translate(79.500000, 7.500000) scale(1, -1) translate(-79.500000, -7.500000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

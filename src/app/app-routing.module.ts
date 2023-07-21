@@ -12,6 +12,9 @@ import {
 import {
   QualityAnalysisComponent,
 } from "./quality-analysis/quality-analysis.component";
+import {
+  ThemeSwitchingComponent
+} from "./theme-switching/theme-switching.component";
 
 const routes: Routes = [
   {
@@ -33,6 +36,10 @@ const routes: Routes = [
   {
     path: "chat",
     component: ChatComponent,
+  },
+  {
+    path: "theme-switching/:theme",
+    component: ThemeSwitchingComponent,
   },
 ];
 
