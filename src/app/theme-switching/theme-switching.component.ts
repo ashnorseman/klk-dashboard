@@ -93,50 +93,130 @@ export class ThemeSwitchingComponent implements AfterViewInit {
 
     chart.setOption({
       grid: {
-        top: 0,
+        top: 10,
         left: 0,
-        right: 0,
-        bottom: 0,
+        right: 4,
+        bottom: 56,
+        containLabel: true,
       },
       legend: {
         show: true,
+        bottom: 0,
+        itemStyle: {
+          borderColor: "#fff",
+          borderWidth: 2,
+        },
+        textStyle: {
+          color: "#334681",
+        },
       },
       xAxis: {
-        data: [
-          "A",
-          "B",
-          "C",
-          "D",
-          "E",
-        ],
+        data: ["Data 1", "Data 2", "Data 3", "Data 4", "Data 5"],
+        boundaryGap: false,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: "#EAEBF0",
+          },
+        },
+        axisTick: {
+          show: false,
+        },
+        axisLabel: {
+          show: true,
+          color: "#6C7293",
+          margin: 10,
+          formatter: (value: string, index: number) => {
+            return `{${index}|${value}}`;
+          },
+          rich: {
+            0: {
+              padding: [0, 0, 0, 32],
+            },
+            4: {
+              padding: [0, 32, 0, 0],
+            },
+          },
+        },
+        splitLine: {
+          show: true,
+          lineStyle: {
+            color: "rgba(234, 235, 230, .5)",
+          },
+        },
+      },
+      yAxis: {
+        type: "value",
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: "#EAEBF0",
+          },
+        },
+        axisLabel: {
+          show: true,
+          color: "#6C7293",
+          fontSize: 12,
+        },
+        splitLine: {
+          lineStyle: {
+            color: "#EAEBF0",
+            type: "dashed",
+          },
+        },
       },
       series: [
         {
-          name: "A",
-          data: [
-            10,
-            22,
-            28,
-            43,
-            49,
-          ],
+          name: "Data 1",
+          data: [10, 22, 28, 43, 49],
           type: "line",
-          stack: "x",
+          smooth: true,
+          color: "#387DFF",
+          symbol: "circle",
+          symbolSize: 10,
+          itemStyle: {
+            borderColor: "#fff",
+            borderWidth: 3,
+          }
         },
         {
-          name: "B",
-          data: [
-            5,
-            4,
-            3,
-            5,
-            10,
-          ],
+          name: "Data 2",
+          data: [5, 4, 3, 5, 10],
           type: "line",
-          stack: "x",
-          label: {
-            show: true,
-          },
+          smooth: true,
+          color: "#EAD656",
+          symbol: "circle",
+          symbolSize: 10,
+          itemStyle: {
+            borderColor: "#fff",
+            borderWidth: 3,
+          }
+        },
+        {
+          name: "Data 3",
+          data: [15, 14, 13, 15, 20],
+          type: "line",
+          smooth: true,
+          color: "#FE7C4B",
+          symbol: "circle",
+          symbolSize: 10,
+          itemStyle: {
+            borderColor: "#fff",
+            borderWidth: 3,
+          }
+        },
+        {
+          name: "Data 4",
+          data: [25, 24, 23, 25, 30],
+          type: "line",
+          smooth: true,
+          color: "#23B899",
+          symbol: "circle",
+          symbolSize: 10,
+          itemStyle: {
+            borderColor: "#fff",
+            borderWidth: 3,
+          }
         },
       ],
     });
