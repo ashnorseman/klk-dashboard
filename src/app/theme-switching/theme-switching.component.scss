@@ -33,6 +33,36 @@
   --overview-title: #fff;
 }
 
+:host(.dark) {
+  --bg-high: #16171a;
+  --bg-low: #111213;
+  --border: #c2c7d9;
+  --text: #fff;
+  --text-light: #8590b3;
+  --border-shadow: rgba(255, 255, 255, .1);
+  --alert: #ff635b;
+  --highlight: #387dff;
+  --success: #6dd230;
+  --primary: #fe7c4b;
+
+  --button-primary-text: #fff;
+  --table-header-bg: rgba(51, 70, 129, .05);
+
+  --input-color: rgba(255, 255, 255, .6);
+
+  --header-shadow: inset 0 -1px 0 0 #090B0D;
+  --header-avatar-shadow: 0 0 2px rgba(119, 140, 162, .1);
+
+  --sidebar-nav-bg: #222529;
+  --sidebar-nav-shadow: inset -1px 0 0 0 #24272E;
+  --sidebar-toggle-border: rgba(135, 139, 146, .2);
+
+  --overview-border: rgba(32, 53, 128, .16);
+  --overview-shadow: 0 24px 20px -20px rgba(56, 125, 255, .4);
+  --overview-text: rgba(255, 255, 255, .6);
+  --overview-title: #fff;
+}
+
 /* Common */
 
 button,
